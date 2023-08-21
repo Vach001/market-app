@@ -1,0 +1,11 @@
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+    padding-top: 40px;
+}
+
+.rounded {
+    border-radius: 30px;
+}
+  

@@ -2,10 +2,9 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home";
-import About from "./About";
+import About from "./About/About";
 import Products from "./Products";
 import ProductDetails from "./ProductDetails";
-import Cart from "../Cart";
 
 function Market() {
   const [cart, setCart] = useState(function () {
@@ -80,7 +79,7 @@ function Market() {
             <ProductDetails onProductAdd={handleProductAdd} />
           </Route>
           <Route exact path="/cart">
-            <Cart cart={cart} />
+
           </Route>
         </Routes>
       </div>

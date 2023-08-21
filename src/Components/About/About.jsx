@@ -16,7 +16,7 @@ export default function About() {
           height="275"
           width="183"
           className="rounded"
-          alt=""
+          alt="Նկարը անհասնելի է..."
         />
       </div>
     );
