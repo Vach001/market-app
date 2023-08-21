@@ -1,7 +1,8 @@
 import Product from "./Product";
 import useSWR from "swr";
-import Loader from "./Loader/Loader";
-import fetcher from "./fetcher";
+import Loader from "../Loader/Loader";
+import fetcher from "../../helpers/fetcher";
+import styles from "./Products.module.css"
 
 export default function Products(props) {
   const {
@@ -40,19 +41,16 @@ let productStripeId = {
   console.log(products);
 
   return (
-    <div className="products-layout">
-      <h1>Products</h1>
-      <p>Take a look at our products</p>
-      <div className="products-grid">
+    <div className={styles.productsLayout}>
+      <h1>Ապրանքներ</h1>
+      <p>Հաճելի գնումներ</p>
+      <div className={styles.productsGrid}>
         {loading && <Loader />}
         {error && (
-          <p>
-            There was an error loading the products. Please try again later.
-          </p>
+          <p>Ապրանքները բեռնելիս սխալ տեղի ունեցավ: Խնդրում եմ փորձեք մի փոքր ուշ.</p>
         )}
         {products.map((product) => {
           return (
-          
             <Product
               key={product.id}
               details={product}
