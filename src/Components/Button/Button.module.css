@@ -9,54 +9,32 @@
     transition: background-color 200ms, color 200ms;
 }
 
-.btn-default {
+.btnDefault {
     color: var(--white);
     background-color: var(--primary-1);
 }
 
-.btn-default:hover,
-.btn-outline:hover {
+.btnDefault:hover,
+.btnOutline:hover {
     color: var(--white);
     background-color: var(--primary-2);
     text-decoration: none;
 }
 
-.btn-default:active,
-.btn-outline:active {
+.btnDefault:active,
+.btnOutline:active {
     color: var(--primary-1);
     background-color: var(--primary-4);
 }
 
-.btn-default[disabled],
-.btn-outline[disabled] {
+.btnDefault[disabled],
+.btnOutline[disabled] {
     color: var(--primary-4);
     background-color: var(--primary-5);
     cursor: default;
 }
 
-.btn-accent {
-    color: var(--white);
-    background-color: var(--accent-1);
-}
-
-.btn-accent:hover {
-    color: var(--white);
-    background-color: var(--accent-2);
-    text-decoration: none;
-}
-
-.btn-accent:active {
-    color: var(--accent-1);
-    background-color: var(--accent-4);
-}
-
-.btn-accent[disabled] {
-    color: var(--accent-4);
-    background-color: var(--accent-5);
-    cursor: default;
-}
-
-.btn-outline {
+.btnOutline {
     color: var(--primary-1);
     background-color: var(--primary-4);
     border: var(--primary-1) 2px solid;
