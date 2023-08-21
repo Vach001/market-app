@@ -1,6 +1,6 @@
 import Product from "./Product";
 import useSWR from "swr";
-import Loader from "../Components/Loader";
+import Loader from "./Loader/Loader";
 import fetcher from "./fetcher";
 
 export default function Products(props) {
