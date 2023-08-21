@@ -12,17 +12,17 @@ export default function Navbar(props) {
       </NavLink>
       <ul>
         <li className={styles.navItem}>
-          <NavLink exact activeClassName="active" to="/">
+          <NavLink exact activeClassName={styles.active} to="/">
             Գլխավոր
           </NavLink>
         </li>
         <li className={styles.navItem}>
-          <NavLink exact activeClassName="active" to="/about">
+          <NavLink exact activeClassName={styles.active} to="/about">
             Մեր մասին
           </NavLink>
         </li>
         <li className={styles.navItem}>
-          <NavLink activeClassName="active" to="/products">
+          <NavLink activeClassName={styles.active} to="/products">
             Ապրանքներ
           </NavLink>
         </li>
