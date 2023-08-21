@@ -1,0 +1,90 @@
+.navbar {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.07),
+    0px -3px 7px 1px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBrand {
+  font-size: 40px;
+  font-weight: 450;
+  text-decoration: none;
+  padding-left: 20px;
+  color: initial;
+}
+.navBrand:hover {
+  text-decoration: none;
+}
+.navBrand:active {
+  color: var(--primary-1);
+}
+
+.navbar ul {
+  list-style-type: none;
+  overflow: hidden;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navItem a {
+  text-decoration: none;
+  font-weight: normal;
+  color: var(--primary-1);
+  display: inline-block;
+  text-align: center;
+  padding: 13px 20px;
+  min-width: 75px;
+}
+
+.navItem:hover a {
+  text-decoration: none;
+  color: var(--primary-2);
+}
+
+.navItem a.active {
+  font-weight: bold;
+}
+
+.navCart {
+  width: 65px;
+  text-align: center;
+  padding: 10px 25px;
+}
+.btn {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 40px;
+  border: 0;
+  transition: background-color 200ms, color 200ms;
+}
+.btnAccent {
+  color: var(--white);
+  background-color: var(--accent-1);
+}
+
+.btnAccent:hover {
+  color: var(--white);
+  background-color: var(--accent-2);
+  text-decoration: none;
+}
+
+.btnAccent:active {
+  color: var(--accent-1);
+  background-color: var(--accent-4);
+}
+
+.btnAccent[disabled] {
+  color: var(--accent-4);
+  background-color: var(--accent-5);
+  cursor: default;
+}
