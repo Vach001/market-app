@@ -1,9 +1,11 @@
 import {
   NavLink,
-  Routers,
   Route,
   useParams,
-  useRouteMatch,
+  useMatch,
+  Routes,
+  Router,
+  BrowserRouter,
 } from "react-router-dom";
 import ProductDetailInfo from "../ProductDetailInfo/ProductDetailInfo";
 import ProductDetailNutrition from "../ProductDetailNutrition/ProductDetailNutrition";
@@ -14,7 +16,7 @@ import styles from "./ProductDetails.module.css";
 
 export default function ProductDetails(props) {
   const params = useParams();
-  const match = useRouteMatch();
+  const match = useMatch();
 
   const { data: product = {}, error } = useSWR(
     `https://react-tutorial-demo.firebaseio.com/productinfo/id${params.id}.json`,
@@ -28,6 +30,7 @@ export default function ProductDetails(props) {
   }
 
   return (
+    <Router>
     <div className={styles.productDetailsLayout}>
       <div>
         <h2>{product.name}</h2>
@@ -40,6 +43,7 @@ export default function ProductDetails(props) {
         />
       </div>
       <div>
+        
         <div className={styles.tabs}>
           <ul>
             <li>
@@ -67,7 +71,8 @@ export default function ProductDetails(props) {
             </li>
           </ul>
         </div>
-        <Routers>
+        
+        <Routes>
           <Route exact path={match.path}>
             <ProductDetailInfo
               onProductAdd={props.onProductAdd}
@@ -82,8 +87,10 @@ export default function ProductDetails(props) {
           <Route path={match.path + "/storage"}>
             <ProductDetailStorage storage={product.storage} />
           </Route>
-        </Routers>
+        </Routes>
+       
       </div>
     </div>
+    </Router>
   );
 }

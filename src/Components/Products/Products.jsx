@@ -1,4 +1,4 @@
-import Product from "./Product";
+import Product from "../Product/Product";
 import useSWR from "swr";
 import Loader from "../Loader/Loader";
 import fetcher from "../../helpers/fetcher";
@@ -14,7 +14,6 @@ export default function Products(props) {
     fetcher
   );
 
-//Hitesh's stripe account price id
 let productStripeId = {
   cheese:'price_1LaKFcGbVclIjlflyQlSDi1L', 
   tomato:'price_1LaKG8GbVclIjlflF2N8MwAz', 
@@ -22,9 +21,7 @@ let productStripeId = {
   milk:'price_1LaKGWGbVclIjlfluo9gOr0l', 
 };
 
-
-
- products.forEach(product => {
+products.forEach(product => {
   if (product.id === 1){
     product.price_id = productStripeId.cheese;
   }

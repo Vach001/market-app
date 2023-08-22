@@ -27,7 +27,7 @@ export default function Navbar(props) {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/cart" className={styles.classNames('navItem', 'navCart', 'btn', 'btnAccent')}>
+          <NavLink to="/cart" className={(styles.navItem, styles.navCart, styles.btn, styles.btnAccent)}>
             Զամբյուղ ({cartCount})
           </NavLink>
         </li>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "./Button.js";
+import Button from "../Button/Button";
 import styles from "./Product.module.css"
 
 export default function Product(props) {

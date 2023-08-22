@@ -2,7 +2,7 @@ import styles from "./ProductDetailNutrition.module.css";
 
 export default function ProductDetailNutrition({ nutrition }) {
   return (
-    <table className={styles.classNames("table", "tableNutrition")}>
+    <table className={(styles.table, styles.tableNutrition)}>
       <thead>
         <tr>
           <th>Սննդանյութեր</th>
@@ -11,7 +11,7 @@ export default function ProductDetailNutrition({ nutrition }) {
       </thead>
       <tbody>
         <tr>
-          <td>Պրոտեին</td>
+          <td>Սպիտակուցներ</td>
           <td>{nutrition.protein}գ</td>
         </tr>
         <tr>

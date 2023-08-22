@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
-import Navbar from "./Navbar/Navbar";
-import Home from "./Home/Home";
-import About from "./About/About";
-import Products from "./Products/Products";
-import ProductDetails from "./ProductDetails";
+import { Route, BrowserRouter, Router, Routes } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Home from "../Home/Home";
+import About from "../About/About";
+import Products from "../Products/Products";
+import ProductDetails from "../ProductDetails/ProductDetails";
+import styles from "./Market.module.css";
 
 function Market() {
   const [cart, setCart] = useState(function () {
@@ -29,12 +30,10 @@ function Market() {
   }
 
   function handleProductAdd(newProduct) {
-    // check if item exists
     const existingProduct = cart.find(
       (product) => product.id === newProduct.id
     );
     if (existingProduct) {
-      // increase quantity
       const updatedCart = cart.map((product) => {
         if (product.id === newProduct.id) {
           return {
@@ -46,7 +45,6 @@ function Market() {
       });
       setCart(updatedCart);
     } else {
-      // product is new to the cart
       setCart([
         ...cart,
         {
@@ -58,9 +56,12 @@ function Market() {
   }
 
   return (
-    <BrowserRouter>
+    <>
+    <Router>
       <Navbar cart={cart} />
-      <div className="container">
+      <div className={styles.container}>
+        
+        
         <Routes>
           <Route exact path="/">
             <Home />
@@ -78,13 +79,13 @@ function Market() {
           <Route path="/products/:id">
             <ProductDetails onProductAdd={handleProductAdd} />
           </Route>
-          <Route exact path="/cart">
-
-          </Route>
+          <Route exact path="/cart"></Route>
         </Routes>
+        
+        
       </div>
-    </BrowserRouter>
+    </Router>
+    </>
   );
 }
-
 export default Market;
