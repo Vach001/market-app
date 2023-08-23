@@ -1,62 +1,62 @@
 {
     "id1": {
-        "description": "200գ պանիր",
-        "id": 1,
-        "image": "https://static.vecteezy.com/system/resources/previews/009/380/457/original/cheese-clipart-design-illustration-free-png.png",
-        "name": "Պանիր",
-        "nutrition": {
+      "description": "200գ պանիր",
+      "id": 1,
+      "image": "https://static.vecteezy.com/system/resources/previews/009/380/457/original/cheese-clipart-design-illustration-free-png.png",
+      "name": "Պանիր",
+      "nutrition": {
         "carbs": 1.3,
         "fat": 33,
         "protein": 25,
         "salt": 1
-        },
-        "price": 500,
-        "price_id": "price_1HuavSGuhXEITAut56IgndJf",
-        "storage": "Պահել զով տեղում (5°C -ից 15°C)"
+      },
+      "price": 500,
+      "price_id": "price_1HuavSGuhXEITAut56IgndJf",
+      "storage": "Պահել զով տեղում (5°C -ից 15°C)"
     },
     "id2": {
-        "description": "500 մլ կաթ",
-        "id": 2,
-        "image": "https://illustoon.com/photo/4904.png",
-        "name": "Կաթ",
-        "nutrition": {
+      "description": "500 մլ կաթ",
+      "id": 2,
+      "image": "https://illustoon.com/photo/4904.png",
+      "name": "Կաթ",
+      "nutrition": {
         "carbs": 11,
         "fat": 15,
         "protein": 16,
         "salt": 0.44
-        },
-        "price": 320,
-        "price_id": "price_1HxVriGuhXEITAutt5KUKo2V",
-        "storage": "Պահել սառնարանում"
+      },
+      "price": 320,
+      "price_id": "price_1HxVriGuhXEITAutt5KUKo2V",
+      "storage": "Պահել սառնարանում"
     },
     "id3": {
-        "description": "1կգ լոլիկ",
-        "id": 3,
-        "image": "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9zdGF0aWMvaW1hZ2VzL3dlYnNpdGUvMjAyMy0wNS9mcnRvbWF0b19yZWRfcm9zYV92ZWdldGFibGUtaW1hZ2Utam9iNjIxLTAxLnBuZw.png?s=Mr0rwfa44A99Yd5RBicYxsLFxn1slC2OWIjr7lapfRo",
-        "name": "Լոլիկ",
-        "nutrition": {
+      "description": "1կգ լոլիկ",
+      "id": 3,
+      "image": "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9zdGF0aWMvaW1hZ2VzL3dlYnNpdGUvMjAyMy0wNS9mcnRvbWF0b19yZWRfcm9zYV92ZWdldGFibGUtaW1hZ2Utam9iNjIxLTAxLnBuZw.png?s=Mr0rwfa44A99Yd5RBicYxsLFxn1slC2OWIjr7lapfRo",
+      "name": "Լոլիկ",
+      "nutrition": {
         "carbs": 4,
         "fat": 0.2,
         "protein": 1,
         "salt": 0
-        },
-        "price": 250,
-        "price_id": "price_1HxW4YGuhXEITAutgcWugXH7",
-        "storage": "Պահել զով տեղում, արևից ճառագայթներից պաշտպանված։"
+      },
+      "price": 250,
+      "price_id": "price_1HxW4YGuhXEITAutgcWugXH7",
+      "storage": "Պահել զով տեղում, արևի ճառագայթներից պաշտպանված։"
     },
     "id4": {
-        "description": "500գ արքայախնձոր",
-        "id": 4,
-        "image": "https://w7.pngwing.com/pngs/9/79/png-transparent-pineapple-fruit-pineapple-pineapple-fruit-pineapple-clipart-thumbnail.png",
-        "name": "Արքայախնձոր",
-        "nutrition": {
+      "description": "500գ արքայախնձոր",
+      "id": 4,
+      "image": "https://w7.pngwing.com/pngs/9/79/png-transparent-pineapple-fruit-pineapple-pineapple-fruit-pineapple-clipart-thumbnail.png",
+      "name": "Արքայախնձոր",
+      "nutrition": {
         "carbs": 22,
         "fat": 2,
         "protein": 1,
         "salt": 0
-        },
-        "price": 2750,
-        "price_id": "price_1HxW59GuhXEITAutCwoYZoOJ",
-        "storage": "Պահել զով տեղում, արևից ճառագայթներից պաշտպանված։"
+      },
+      "price": 2750,
+      "price_id": "price_1HxW59GuhXEITAutCwoYZoOJ",
+      "storage": "Պահել զով տեղում, արևի ճառագայթներից պաշտպանված։"
     }
 }
