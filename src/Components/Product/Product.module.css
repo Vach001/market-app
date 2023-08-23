@@ -1,5 +1,5 @@
 .product {
-  background-color: white;
+  background-color: azure;
   padding: 15px 20px;
   border-radius: 25px;
   display: grid;
@@ -9,7 +9,12 @@
 .productInfo {
   padding-left: 25px;
 }
-
+.productPrice {
+  width: 70px;
+  height: 40px;
+  background-color: aqua;
+  border-radius: 15px;
+}
 .productCheckout {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -17,11 +22,12 @@
 }
 
 .productDelete {
-  background-color: white;
+  background-color: rgb(241, 135, 135);
   padding: 5px 10px;
   color: var(--accent-1);
   border-color: var(--accent-2);
   font-size: 14px;
+  border-radius: 15px;
 }
 
 .productImageContainer {
@@ -32,14 +38,14 @@
   position: absolute;
   top: 8px;
   right: -15px;
-  background-color: white;
+  background-color: rgb(223, 245, 231);
   border-radius: 50%;
   padding: 5px;
 }
 
 .productQuantity {
   background-color: var(--primary-1);
-  color: white;
+  color: rgb(7, 71, 55);
   border-radius: 50%;
   font-size: 14px;
   width: 23px;

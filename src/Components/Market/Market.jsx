@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Route, BrowserRouter, Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Home from "../Home/Home";
 import About from "../About/About";
 import Products from "../Products/Products";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import styles from "./Market.module.css";
+import Cart from "../Cart/Cart";
 
 function Market() {
   const [cart, setCart] = useState(function () {
@@ -57,34 +58,30 @@ function Market() {
 
   return (
     <>
-    <Router>
-      <Navbar cart={cart} />
-      <div className={styles.container}>
-        
-        
-        <Routes>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/products">
-            <Products
-              cart={cart}
-              onProductAdd={handleProductAdd}
-              onProductDelete={handleProductDelete}
+      <BrowserRouter>
+        <Navbar cart={cart} />
+        <div className={styles.container}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/products"
+              element={
+                <Products
+                  cart={cart}
+                  onProductAdd={handleProductAdd}
+                  onProductDelete={handleProductDelete}
+                />
+              }
             />
-          </Route>
-          <Route path="/products/:id">
-            <ProductDetails onProductAdd={handleProductAdd} />
-          </Route>
-          <Route exact path="/cart"></Route>
-        </Routes>
-        
-        
-      </div>
-    </Router>
+            <Route
+              path="/products/:id"
+              element={<ProductDetails onProductAdd={handleProductAdd} />}
+            />
+            <Route path="/cart" element={<Cart cart={cart} />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   );
 }

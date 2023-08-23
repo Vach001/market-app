@@ -9,14 +9,14 @@ export default function Home() {
         <p>
           Կատարե՛ք Ձեր գնումներն <em>Smail</em> խանութից առցանց, առնվազն 10000 ՀՀ դրամի և ստացե՛ք առաքման ծառայություն՝ Հաղարծնից մինչև 10 կմ-ը ԱՆՎՃԱՐ:
         </p>
-        <Link to="/products" className={(styles.btn, styles.btnDefault)}>
+        <Link to="/products" className={styles.btn}>
           Կատարել գնումներ
         </Link>
       </div>
       <img
-        src="https://res.cloudinary.com/dbfn5lnvx/image/upload/q_auto,w_700/v1607770215/react-tutorial/supermarket/home.jpg"
+        src="https://www.freepnglogos.com/uploads/smile-png/smile-mother-badge-honor-jewish-mom-6.png"
         width="350"
-        height="240"
+        height="350"
         className={(styles.rounded, styles.homeImage)}
         alt="Գլխավոր նկարն բացակայում է..."
       />

@@ -44,7 +44,7 @@ export default function Product(props) {
             </Button>
           )}
         </div>
-        <Button outline onClick={() => props.onProductAdd(details)}>
+        <Button className={styles.productPrice} outline onClick={() => props.onProductAdd(details)}>
           ${details.price}
         </Button>
       </div>

@@ -1,12 +1,4 @@
-import {
-  NavLink,
-  Route,
-  useParams,
-  useMatch,
-  Routes,
-  Router,
-  BrowserRouter,
-} from "react-router-dom";
+import { NavLink, Route, useParams, useMatch, Routes } from "react-router-dom";
 import ProductDetailInfo from "../ProductDetailInfo/ProductDetailInfo";
 import ProductDetailNutrition from "../ProductDetailNutrition/ProductDetailNutrition";
 import ProductDetailStorage from "../ProductDetailStorage/ProductDetailStorage";
@@ -19,7 +11,7 @@ export default function ProductDetails(props) {
   const match = useMatch();
 
   const { data: product = {}, error } = useSWR(
-    `https://react-tutorial-demo.firebaseio.com/productinfo/id${params.id}.json`,
+    `../../data/smailMarket/id${params.id}.json`,
     fetcher
   );
 
@@ -30,7 +22,6 @@ export default function ProductDetails(props) {
   }
 
   return (
-    <Router>
     <div className={styles.productDetailsLayout}>
       <div>
         <h2>{product.name}</h2>
@@ -43,7 +34,6 @@ export default function ProductDetails(props) {
         />
       </div>
       <div>
-        
         <div className={styles.tabs}>
           <ul>
             <li>
@@ -71,26 +61,26 @@ export default function ProductDetails(props) {
             </li>
           </ul>
         </div>
-        
         <Routes>
-          <Route exact path={match.path}>
-            <ProductDetailInfo
-              onProductAdd={props.onProductAdd}
-              product={product}
-            />
-          </Route>
-
-          <Route path={match.path + "/nutrition"}>
-            <ProductDetailNutrition nutrition={product.nutrition} />
-          </Route>
-
-          <Route path={match.path + "/storage"}>
-            <ProductDetailStorage storage={product.storage} />
-          </Route>
+          <Route
+            path={match.path}
+            element={
+              <ProductDetailInfo
+                onProductAdd={props.onProductAdd}
+                product={product}
+              />
+            }
+          />
+          <Route
+            path={match.path + "/nutrition"}
+            element={<ProductDetailNutrition nutrition={product.nutrition} />}
+          />
+          <Route
+            path={match.path + "/storage"}
+            element={<ProductDetailStorage storage={product.storage} />}
+          />
         </Routes>
-       
       </div>
     </div>
-    </Router>
   );
 }
