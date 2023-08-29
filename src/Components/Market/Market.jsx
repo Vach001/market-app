@@ -75,7 +75,7 @@ function Market() {
               }
             />
             <Route
-              path="/products/:id"
+              path="/products/:id/*"
               element={<ProductDetails onProductAdd={handleProductAdd} />}
             />
             <Route path="/cart" element={<Cart cart={cart} />} />

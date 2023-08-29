@@ -8,10 +8,10 @@ import styles from "./ProductDetails.module.css";
 
 export default function ProductDetails(props) {
   const params = useParams();
-  const match = useMatch();
+  // const match = useMatch();
 
-  const { data: product = {}, error } = useSWR(
-    `../../data/smailMarket/id${params.id}.json`,
+  const { product = {}, error } = useSWR(
+    `https://react-tutorial-demo.firebaseio.com/supermarket/id${params.id}/*.json`,
     fetcher
   );
 
@@ -37,24 +37,22 @@ export default function ProductDetails(props) {
         <div className={styles.tabs}>
           <ul>
             <li>
-              <NavLink exact activeClassName={styles.tabActive} to={match.url}>
+              <NavLink className={styles.tabActive} to='/'>
                 Մանրամասներ
               </NavLink>
             </li>
             <li>
               <NavLink
-                exact
-                activeClassName={styles.tabActive}
-                to={match.url + "/nutrition"}
+               className={styles.tabActive}
+                to="nutrition"
               >
                 Սննդային արժեքը
               </NavLink>
             </li>
             <li>
               <NavLink
-                exact
-                activeClassName={styles.tabActive}
-                to={match.url + "/storage"}
+                className={styles.tabActive}
+                to="storage"
               >
                 Պահպանման պայմաններ
               </NavLink>
@@ -63,7 +61,7 @@ export default function ProductDetails(props) {
         </div>
         <Routes>
           <Route
-            path={match.path}
+            path="/"
             element={
               <ProductDetailInfo
                 onProductAdd={props.onProductAdd}
@@ -72,11 +70,11 @@ export default function ProductDetails(props) {
             }
           />
           <Route
-            path={match.path + "/nutrition"}
+            path="nutrition"
             element={<ProductDetailNutrition nutrition={product.nutrition} />}
           />
           <Route
-            path={match.path + "/storage"}
+            path="storage"
             element={<ProductDetailStorage storage={product.storage} />}
           />
         </Routes>
