@@ -1,4 +1,4 @@
-import { NavLink, Route, useParams, useMatch, Routes } from "react-router-dom";
+import { NavLink, Route, useParams, Routes } from "react-router-dom";
 import ProductDetailInfo from "../ProductDetailInfo/ProductDetailInfo";
 import ProductDetailNutrition from "../ProductDetailNutrition/ProductDetailNutrition";
 import ProductDetailStorage from "../ProductDetailStorage/ProductDetailStorage";
