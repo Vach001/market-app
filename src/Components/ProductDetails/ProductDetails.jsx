@@ -1,20 +1,18 @@
 import { NavLink, Route, useParams, Routes } from "react-router-dom";
-import ProductDetailInfo from "../ProductDetailInfo/ProductDetailInfo";
-import ProductDetailNutrition from "../ProductDetailNutrition/ProductDetailNutrition";
-import ProductDetailStorage from "../ProductDetailStorage/ProductDetailStorage";
+import ProductDetailInfo from "../ProductDetailInfo/ProductDetailInfo.jsx";
+import ProductDetailNutrition from "../ProductDetailNutrition/ProductDetailNutrition.jsx";
+import ProductDetailStorage from "../ProductDetailStorage/ProductDetailStorage.jsx";
 import useSWR from "swr";
 import fetcher from "../../helpers/fetcher.js";
 import styles from "./ProductDetails.module.css";
 
 export default function ProductDetails(props) {
   const params = useParams();
-  // const match = useMatch();
 
-  const { product = {}, error } = useSWR(
-    `https://react-tutorial-demo.firebaseio.com/supermarket/id${params.id}/*.json`,
+  const { data: product = {}, error } = useSWR(
+    `https://react-tutorial-demo.firebaseio.com/productinfo/id${params.id}/.json`,
     fetcher
   );
-
   if (error) {
     return (
       <p>Ապրանքների բեռնումն ձախողվել է, խնդրում ենք փորձեք մի փոքր ուշ</p>
@@ -37,7 +35,7 @@ export default function ProductDetails(props) {
         <div className={styles.tabs}>
           <ul>
             <li>
-              <NavLink className={styles.tabActive} to='/'>
+              <NavLink className={styles.tabActive} to=''>
                 Մանրամասներ
               </NavLink>
             </li>
