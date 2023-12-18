@@ -35,6 +35,13 @@
 .tabs .tabActive {
   border-bottom: 7px solid var(--primary-1);
 }
+.tabs:hover {
+  cursor: pointer;
+}
+.tabs li:active {
+  font-size: 20px;
+  color: rgb(38, 104, 104);
+}
 @media (max-width: 700px) {
   .homeLayout,
   .aboutLayout,
