@@ -34,17 +34,16 @@ products.forEach(product => {
   if (product.id === 4){
     product.price_id = productStripeId.pineapple;
   }
- });
-  console.log(products);
+});
 
   return (
     <div className={styles.productsLayout}>
-      <h1>Ապրանքներ</h1>
-      <p>Հաճելի գնումներ</p>
+      <h1>Products</h1>
+      <p>Good Luck</p>
       <div className={styles.productsGrid}>
         {loading && <Loader />}
         {error && (
-          <p>Ապրանքները բեռնելիս սխալ տեղի ունեցավ: Խնդրում եմ փորձեք մի փոքր ուշ.</p>
+          <p>Error! Can't open product list. Refresh you page.</p>
         )}
         {products.map((product) => {
           return (

@@ -4,13 +4,13 @@ export default function About() {
     return (
       <div className={styles.aboutLayout}>
         <div>
-          <h1>Մեր մասին</h1>
+          <h1>About us</h1>
           <p>
-            Մեր խանութը բացվել է 2021 թվականի ապրիլի 1-ին:
+            Our store opened on April 1, 2021.
             <br />
-            Մեր նպատակն է մեր հաճախորդներին ներկայացնել միայն որակյալ ապրանքներ 
+            Our goal is to present only quality products to our customers 
             <br />
-            <em>Այս օնլայն խանութը Ձեզ հնարավորություն կտա խնայել ձեր ժամանակն ու միջոցներն:</em>
+            <em>This online store will give you the opportunity to save your time and money.</em>
           </p>
         </div>
         <img
@@ -18,7 +18,7 @@ export default function About() {
           height="275"
           width="183"
           className={styles.rounded}
-          alt="Նկարը անհասնելի է..."
+          alt="Unable to show, please update!"
         />
       </div>
     );

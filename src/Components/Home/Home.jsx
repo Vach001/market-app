@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <div className={styles.homeLayout}>
       <div>
-        <h1>Օնլայն Գնումներ</h1>
+        <h1>Shopping Online</h1>
         <p>
-          Կատարե՛ք Ձեր գնումներն <em>Smail</em> խանութից առցանց, առնվազն 10000 ՀՀ դրամի և ստացե՛ք առաքման ծառայություն՝ Հաղարծնից մինչև 10 կմ-ը ԱՆՎՃԱՐ:
+         Make your purchases from <em>Smail</em> online store, at least AMD 10,000 and get FREE delivery service.
         </p>
         <Link to="/products" className={styles.btn}>
-          Կատարել գնումներ
+         Make purchases
         </Link>
       </div>
       <img
@@ -18,7 +18,7 @@ export default function Home() {
         width="350"
         height="350"
         className={(styles.rounded, styles.homeImage)}
-        alt="Գլխավոր նկարն բացակայում է..."
+        alt="Unable to show, please update!"
       />
     </div>
   );

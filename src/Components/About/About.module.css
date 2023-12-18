@@ -1,13 +1,12 @@
 .aboutLayout {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-gap: 20px;
+    grid-gap: 25px;
     padding-top: 40px;
+    color: rgb(103, 114, 1);
 }
 
 .rounded {
     border-radius: 30px;
     width: 400px;
-
-}
-  
+} 

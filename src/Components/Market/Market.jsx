@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
-import Home from "../Home/Home";
-import About from "../About/About";
-import Products from "../Products/Products";
-import ProductDetails from "../ProductDetails/ProductDetails";
+import Navbar from "../Navbar/Navbar.jsx";
+import Home from "../Home/Home.jsx";
+import About from "../About/About.jsx";
+import Products from "../Products/Products.jsx";
+import ProductDetails from "../ProductDetails/ProductDetails.jsx";
 import styles from "./Market.module.css";
-import Cart from "../Cart/Cart";
+import Cart from "../Cart/Cart.jsx";
 
 function Market() {
   const [cart, setCart] = useState(function () {

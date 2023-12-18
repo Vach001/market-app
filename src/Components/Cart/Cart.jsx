@@ -1,17 +1,15 @@
 import { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import styles from "./Cart.module.css";
-import Button from "../Button/Button";
-import Input from "../Input/Input";
+import Button from "../Button/Button.jsx";
+import Input from "../Input/Input.jsx";
 
 const stripeLoadedPromise = loadStripe(
   "pk_test_51L9BqvGbVclIjlflPWVP7ahSUrZlYjl9tyLj39O1P5yKBzCH4NOnJcTDKWlBYPSAJjoGz68LiT3rdJ21q1EkTuKi00asdGGVk4"
 );
 export default function Cart({ cart }) {
   const totalPrice = cart.reduce(
-    (total, product) => total + product.price * product.quantity,
-    0
-  );
+    (total, product) => total + product.price * product.quantity, 0);
   const [email, setEmail] = useState("");
 
   function handleFormSubmit(event) {
@@ -23,7 +21,7 @@ export default function Cart({ cart }) {
     stripeLoadedPromise.then((stripe) => {
       stripe
         .redirectToCheckout({
-          lineItems: lineItems,
+          lineItems,
           mode: "payment",
           successUrl: "http://localhost:3000/",
           cancelUrl: "http://localhost:3000/",
@@ -40,9 +38,9 @@ export default function Cart({ cart }) {
   return (
     <div className={styles.cartLayout}>
       <div>
-        <h1>ԻՄ ԶԱՄԲՅՈՒՂԸ</h1>
+        <h1>Your Cart</h1>
         {cart.length === 0 && (
-          <p>Դուք դեռ որևէ ապրանք չեք ավելացրել ձեր զամբյուղում:</p>
+          <p>You have not added any product to your cart yet.</p>
         )}
         {cart.length > 0 && (
           <>
@@ -50,11 +48,11 @@ export default function Cart({ cart }) {
               <thead>
                 <tr>
                   <th width="25%" className={styles.thProduct}>
-                    Ապրանք
+                    Product
                   </th>
-                  <th width="20%">Միավորի գին</th>
-                  <th width="10%">Քանակ</th>
-                  <th width="25%">Ընդամենը</th>
+                  <th width="20%">Unit price</th>
+                  <th width="10%">Quanity</th>
+                  <th width="25%">Total</th>
                 </tr>
               </thead>
               <tbody>
@@ -62,8 +60,8 @@ export default function Cart({ cart }) {
                   return (
                     <tr key={product.id}>
                       <td>
-                        <img src={product.image} width="30" height="30" alt="Ապրանքի նկարն վնասված է" />
-                        {" "}
+                        <img src={product.image} width="30" height="30" alt="Unable to show, please update!" 
+                        />{" "}
                         {product.name}
                       </td>
                       <td>${product.price}</td>
@@ -78,18 +76,18 @@ export default function Cart({ cart }) {
               <tfoot>
                 <tr>
                   <th colSpan="2"></th>
-                  <th className={styles.cartHighlight}>ԸՆԴԱՄԵՆԸ</th>
+                  <th className={styles.cartHighlight}>Total</th>
                   <th className={styles.cartHighlight}>${totalPrice}</th>
                 </tr>
               </tfoot>
             </table>
             <form className={styles.payForm} onSubmit={handleFormSubmit}>
               <p>
-                Գրե՛ք Ձեր էլ. հասցեն և սեխմեք վճարել: 
-                Վճարումը կատարելուց հետո ապրանքը կառաքվի 1 օրվա ընթացքում:
+                Enter your email and then click on pay and your products will be
+                delivered to you on the same day!
                 <br />
                 <em>
-                  Կամ սեխմեք Ապրանքներ կոճակին գնումները շարունակելու համար:
+                  Or click product button to continue shopping
                 </em>
               </p>
               <Input
@@ -100,7 +98,7 @@ export default function Cart({ cart }) {
                 required
                 className={styles.input}
               />
-              <Button className={styles.btnPay} type="submit">ՎՃԱՐԵԼ</Button>
+              <Button className={styles.btnPay} type="submit">Pay</Button>
             </form>
           </>
         )}

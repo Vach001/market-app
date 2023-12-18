@@ -15,7 +15,7 @@ export default function ProductDetails(props) {
   );
   if (error) {
     return (
-      <p>Ապրանքների բեռնումն ձախողվել է, խնդրում ենք փորձեք մի փոքր ուշ</p>
+      <p>Failed to load products, please try again later.</p>
     );
   }
 
@@ -36,7 +36,7 @@ export default function ProductDetails(props) {
           <ul>
             <li>
               <NavLink className={styles.tabActive} to=''>
-                Մանրամասներ
+                Details
               </NavLink>
             </li>
             <li>
@@ -44,7 +44,7 @@ export default function ProductDetails(props) {
                className={styles.tabActive}
                 to="nutrition"
               >
-                Սննդային արժեքը
+                Nutritional value
               </NavLink>
             </li>
             <li>
@@ -52,7 +52,7 @@ export default function ProductDetails(props) {
                 className={styles.tabActive}
                 to="storage"
               >
-                Պահպանման պայմաններ
+                Storage conditions
               </NavLink>
             </li>
           </ul>

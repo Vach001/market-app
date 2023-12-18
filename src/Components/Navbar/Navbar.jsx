@@ -2,8 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css"
 
 export default function Navbar(props) {
-  const cartCount = props.cart.reduce(
-    (total, product) => total + product.quantity, 0);
+  const cartCount = props.cart.reduce((total, product) => total + product.quantity, 0);
 
   return (
     <nav className={styles.navbar}>
@@ -13,22 +12,22 @@ export default function Navbar(props) {
       <ul>
         <li className={styles.navItem}>
           <NavLink className={styles.active} to="/">
-            Գլխավոր
+            Home
           </NavLink>
         </li>
         <li className={styles.navItem}>
           <NavLink className={styles.active} to="/about">
-            Մեր մասին
+            About us
           </NavLink>
         </li>
         <li className={styles.navItem}>
           <NavLink className={styles.active} to="/products">
-            Ապրանքներ
+            Products
           </NavLink>
         </li>
         <li>
           <NavLink to="/cart" className={(styles.navItem, styles.navCart, styles.btn, styles.btnAccent)}>
-            Զամբյուղ ({cartCount})
+            Cart ({cartCount})
           </NavLink>
         </li>
       </ul>
