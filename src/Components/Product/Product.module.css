@@ -12,22 +12,33 @@
 .productPrice {
   width: 70px;
   height: 40px;
-  background-color: aqua;
-  border-radius: 15px;
+  background-color: rgb(243, 236, 203);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.productPrice:active {
+  font-size: 20px;
+  color: green;
 }
 .productCheckout {
   display: grid;
   grid-template-rows: 1fr auto;
   justify-items: end;
+  font-size: 15px;
 }
 
 .productDelete {
-  background-color: rgb(241, 135, 135);
+  background-color: none;
   padding: 5px 10px;
   color: var(--accent-1);
   border-color: var(--accent-2);
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 15px;
+  color: red;
+  cursor: pointer;
+}
+.productDelete:active {
+  font-size: 20px;
 }
 
 .productImageContainer {
