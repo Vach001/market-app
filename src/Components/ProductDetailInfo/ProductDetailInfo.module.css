@@ -1,0 +1,13 @@
+.btn {
+    width: 120px;
+    height: 55px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn:active {
+    color: green;
+    font-size: 30px;
+}
