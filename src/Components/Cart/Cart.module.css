@@ -27,6 +27,8 @@
 
 .tableCart {
   text-align: center;
+  background-color: rgb(221, 250, 240);
+  border-radius: 10px;
 }
 .tableCart tbody td:first-child {
   display: flex;
@@ -35,26 +37,33 @@
   padding-left: 20px;
 }
 .thProduct {
-    text-align: left;
-    padding-left: 25px;
+  text-align: left;
+  padding-left: 25px;
 }
 .cartHighlight {
-    background-color: var(--accent-1);
-    color: rgb(3, 20, 177);
+  background-color: var(--accent-1);
+  color: rgb(3, 20, 177);
 }
 .payForm {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 .input{
-    width: 300px;
-    height: 30px;
-    color: blue;
-    font-size: 20px;
+  width: 300px;
+  height: 30px;
+  color: blue;
+  font-size: 20px;
 }
-.btnPay{
-    width: 200px;
-    height: 40px;
-    border-radius: 20px;
-    margin-top: 15px;
-    background-color: greenyellow;
+.btnPay {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 15px;
+  background-color: rgb(238, 218, 40);
+}
+.btnPay:hover {
+  cursor: pointer;
+}
+.btnPay:active {
+  font-size: 20px;
+  color:rgb(3, 20, 177)
 }
