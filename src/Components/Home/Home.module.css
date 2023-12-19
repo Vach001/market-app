@@ -19,6 +19,9 @@
     color: var(--white);
     background-color: rgb(253, 251, 115);
 }
+.btn:active {
+    font-size: 28px;
+}
 
 .rounded {
     border-radius: 30px;

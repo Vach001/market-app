@@ -7,7 +7,7 @@ export default function Home() {
       <div>
         <h1>Shopping Online</h1>
         <p>
-         Make your purchases from <em>Smail</em> online store, at least AMD 10,000 and get FREE delivery service.
+         Make your purchases from <em>Smail</em> online store: at least AMD 10,000 and get FREE delivery service.
         </p>
         <Link to="/products" className={styles.btn}>
          Make purchases
